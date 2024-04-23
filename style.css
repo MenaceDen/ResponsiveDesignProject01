@@ -1,0 +1,425 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Times New Roman", Times, serif;
+  height: 100vh;
+}
+:root {
+  --main-theme-color: #fea500;
+  --backup-background: #f0bf64;
+  --dark-text: #000;
+  --light-text: #fff;
+}
+/* nav styling */
+.nav-panel {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid var(--main-theme-color);
+  padding: 0 1rem 0 1rem;
+}
+.nav-logo {
+  width: 40px;
+  height: auto;
+}
+.nav-panel a {
+  text-decoration: none;
+  color: var(--main-theme-color);
+  margin: 0 0.5rem 0 0.5rem;
+}
+/* header styling */
+.home-header {
+  height: 45vh;
+  background-color: var(--backup-background);
+  background-image: url(Images/travel_blog.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+/* what we offer part styling*/
+.what-we-offer {
+  position: relative;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+.what-we-offer h2 {
+  font-size: 1.5rem;
+  color: var(--main-theme-color);
+  height: 2rem;
+}
+.what-we-offer > p {
+  font-size: 1rem;
+  height: 1.5rem;
+  color: var(--dark-text);
+}
+.offer-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 6rem;
+  row-gap: 1rem;
+  max-width: 60vw;
+  
+  margin-top: 1rem;
+}
+.column {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  width: 150px;
+  text-align: center;
+}
+.offer-logo img {
+  width: 100px;
+  height: auto;
+}
+.offer-header,
+.offer-text,
+.offer-link * {
+  color: var(--dark-text);
+}
+.offer-link a {
+  text-decoration: none;
+  font-style: italic;
+}
+/* upload photo section styling*/
+.upload-photo {
+  height: 55vh;
+  min-height: 230px;
+  background-color: var(--backup-background);
+  background-image: url("Images/contest_image.jpg");
+  background-size: cover;
+  background-position: center;
+  border-top: 2px solid var(--main-theme-color);
+  display: flex;
+  justify-content: center;
+}
+.upload-offer {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 205px;
+  height: fit-content;
+  margin-top: 2rem;
+  gap: 0.5rem;
+}
+.upload-offer a {
+  text-decoration: none;
+  color: var(--dark-text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  border: 2px solid;
+  border-color: #9b7223 #422000 #19261b #7b767b;
+  padding: 0.4rem;
+  width: fit-content;
+}
+/* top destinations section styling*/
+.top-destinations {
+  height: 70vh;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+.top-destinations h2 {
+  color: var(--main-theme-color);
+  font-size: 1.5rem;
+}
+.destinations-grid-container {
+  width: 60vw;
+  height: 95%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 60vh;
+}
+.destination-column {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.text-container {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 15vw;
+  height: fit-content;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  color: var(--light-text);
+  text-shadow: 2px 2px 3px black;
+}
+.text-container h3 {
+  font-size: 1.4rem;
+}
+.number-one {
+  background-image: url("Images/venice.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.number-two {
+  background-image: url("Images/paris.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.number-three {
+  background-image: url("Images/rome.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.text-container a {
+  text-decoration: none;
+  color: var(--light-text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7rem;
+  border: 2px solid white;
+  width: fit-content;
+  padding: 0.5rem;
+  background-color: hsla(39, 100%, 50%, 0.3);
+}
+/* footer styling*/
+.home-footer {
+  height: 44px;
+  background-color: var(--main-theme-color);
+  color: var(--light-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+}
+/* gallery page styling*/
+.gallery-header {
+  height: 35vh;
+  min-height: 200px;
+  background-color: var(--backup-background);
+  background-image: url(Images/contest_image.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.upload-offer-gallery {
+  color: var(--light-text);
+  width: 20vw;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  text-shadow: 2px 2px 5px black;
+}
+.gallery-photos {
+  display: flex;
+  justify-content: center;
+}
+.gallery-grid-container {
+  width: 70vw;
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.gallery-pic {
+  height: 270px;
+  width: 270px;
+  background-size: cover;
+  background-position: center;
+}
+.num-1 {
+  background-image: url(Images/athen.jpg);
+}
+.num-2 {
+  background-image: url(Images/havana.jpg);
+}
+.num-3 {
+  background-image: url(Images/london.jpeg);
+}
+.num-4 {
+  background-image: url(Images/paris.jpg);
+}
+.num-5 {
+  background-image: url(Images/quiske.jpg);
+}
+.num-6 {
+  background-image: url(Images/rio.jpg);
+}
+.num-7 {
+  background-image: url(Images/rome.jpg);
+}
+.num-8 {
+  background-image: url(Images/taj_mahal.jpg);
+}
+.num-9 {
+  background-image: url(Images/thailand.jpg);
+}
+.num-10 {
+  background-image: url(Images/venice.jpg);
+}
+.upload-button {
+  height: 80px;
+  width: 80px;
+  background-image: url(Images/upload_photo.png);
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  bottom: 8vh;
+  left: 90vw;
+  z-index: 1;
+}
+.upload-button label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.upload-button:hover {
+  background-color: whitesmoke;
+}
+/* avion styling */
+#avion {
+  height: 150px;
+  width: 150px;
+  background-image: url(Images/avion40pc.png);
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 19vh;
+  left: 150vw;
+  visibility: hidden;
+}
+@media (min-width: 900px) {
+  #avion {
+    animation-name: flight;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+  }
+  @keyframes flight {
+    from {
+      visibility: visible;
+      position: sticky;
+      top: 19vh;
+      left: 150vw;
+    }
+    to {
+      position: absolute;
+      top: 19vh;
+      left: calc(0vw - 150px);
+      display: none;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .what-we-offer {
+    height: auto;
+  }
+  .offer-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 80vw;
+  }
+  .column {
+    border-bottom: 2px dotted var(--main-theme-color);
+  }
+  .top-destinations {
+    height: 205vh;
+  }
+  .destinations-grid-container {
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 60vh 60vh 60vh);
+    row-gap: 1rem;
+  }
+  .destination-column {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+  }
+  .text-container {
+    position: relative;
+    min-width: 30vw;
+    top: 25%;
+  }
+  .upload-offer {
+    scale: 90%;
+  }
+  /* gallery page styling */
+  .upload-offer-gallery {
+    width: 35vw;
+  }
+  .gallery-grid-container {
+    grid-template-columns: repeat(2, 270px);
+    column-gap: 8rem;
+  }
+  .upload-button {
+    /* left: 85vw; */
+    left: calc(50vw - 40px);
+  }
+}
+@media (max-width: 576px) {
+  .nav-panel {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: start;
+    padding: 0;
+  }
+  .nav-logo {
+    margin-left: 1rem;
+  }
+  .nav-buttons {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .what-we-offer {
+    height: auto;
+  }
+  .offer-grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 80vw;
+  }
+  .upload-offer {
+    scale: 70%;
+    margin-top: 0;
+  }
+  .text-container {
+    position: relative;
+    min-width: 60vw;
+    top: 30px;
+    scale: 0.9;
+  }
+  .text-container a {
+    font-size: 0.7rem;
+    padding: 0.4rem;
+  }
+  /* gallery page styling */
+  .upload-offer-gallery {
+    width: 70vw;
+    font-size: 0.8rem;
+  }
+  .gallery-grid-container {
+    grid-template-columns: repeat(1, 270px);
+    margin-bottom: 270px;
+  }
+  .gallery-photos {
+    position: relative;
+  }
+  .upload-button {
+    position: absolute;
+    bottom: 8vh;
+    left: 60vw;
+    z-index: 1;
+  }
+}
